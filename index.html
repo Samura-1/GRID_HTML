@@ -1,0 +1,1854 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Учебное пособие</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="slick/slick.css"/>    
+    <link rel="stylesheet" href="slick/slick-theme.css"/>    
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link type="image/x-icon" rel="shortcut icon" href="img/logo.png">
+  </head>
+  <body>
+    <main class="container-fluid">
+      <div class="row">        
+          <nav id="tmSidebar" class="tm-bg-black-transparent tm-sidebar">
+            <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+              <i class="fas fa-bars"></i>
+            </button>
+            <div class="tm-sidebar-sticky">
+              <div class="tm-brand-box">
+                <div class="tm-double-border-1">
+                  <div class="tm-double-border-2">
+                    <h1 class="tm-brand text-uppercase">Учебное пособие</h1>
+                  </div>
+                </div>
+              </div>
+
+              <ul id="tmMainNav" class="nav flex-column text-uppercase  tm-main-nav">
+                <li class="nav-item">
+                  <a href="#grid1" class="nav-link active">
+                    <span class="d-inline-block">Глава 1.Grid Layout</span>
+                    <span class="d-inline-block tm-white-rect"></span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#grid2" class="nav-link">
+                    <span class="d-inline-block">Строки и столбцы</span>
+                    <span class="d-inline-block tm-white-rect"></span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#grid3" class="nav-link">
+                    <span class="d-inline-block">repeat и свойство grid</span>
+                    <span class="d-inline-block tm-white-rect"></span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#grid4" class="nav-link">
+                    <span class="d-inline-block">Размеры строк и столбцов</span>
+                    <span class="d-inline-block tm-white-rect"></span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#grid5" class="nav-link">
+                    <span class="d-inline-block">Отступы между столбцами и строками</span>
+                    <span class="d-inline-block tm-white-rect"></span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#grid6" class="nav-link">
+                    <span class="d-inline-block">Позиционирование элементов</span>
+                    <span class="d-inline-block tm-white-rect"></span>
+                  </a>
+                </li> 
+                <li class="nav-item">
+                  <a href="#grid7" class="nav-link">
+                    <span class="d-inline-block">Наложение элементов</span>
+                    <span class="d-inline-block tm-white-rect"></span>
+                  </a>
+                </li>                                 
+
+                <li class="nav-item">
+                  <a href="#grid8" class="nav-link">
+                    <span class="d-inline-block">Направление и порядок элементов</span>
+                    <span class="d-inline-block tm-white-rect"></span>
+                  </a>
+                </li>                                 
+
+                <li class="nav-item">
+                  <a href="#grid9" class="nav-link">
+                    <span class="d-inline-block">Именованные grid-линии</span>
+                    <span class="d-inline-block tm-white-rect"></span>
+                  </a>
+                </li>                                 
+
+                <li class="nav-item">
+                  <a href="#grid10" class="nav-link">
+                    <span class="d-inline-block">Именованные grid-линии и функция repeat</span>
+                    <span class="d-inline-block tm-white-rect"></span>
+                  </a>
+                </li>                                 
+
+                <li class="nav-item">
+                  <a href="#grid11" class="nav-link">
+                    <span class="d-inline-block">Области грида</span>
+                    <span class="d-inline-block tm-white-rect"></span>
+                  </a>
+                </li>                                 
+
+                <li class="nav-item">
+                  <a href="#grid12" class="nav-link">
+                    <span class="d-inline-block">Макет страницы в Grid Layout</span>
+                    <span class="d-inline-block tm-white-rect"></span>
+                  </a>
+                </li>                                 
+              </ul>                                                                      
+              <footer class="text-center text-white small">
+                <p class="mb--0 mb-2">Copyright 2021 Samura1</p>
+              </footer>
+            </div>
+          </nav>  
+          <main role="main" class="ml-sm-auto col-12">
+            <div
+              class="parallax-window"
+              data-parallax="scroll"
+              data-image-src="">
+              <div class="tm-section-wrap bg-white">
+                <section id="grid1" class="tm-section">
+                <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h2  class="text-center title-sub">Grid Layout</h2>
+                    <p class="text-center title-sub">Что такое Grid Layout. Grid Container</p>
+                    <p>Grid Layout представляет специальный модуль CSS3, который позволяет позиционировать элементы в виде сетки или таблицы. Как и Flexbox, Grid Layout представляет гибкий подход к компоновке элементов, только если flexbox размещает вложенные элементы в одном направлении - по горизонтали в виде столбиков или по вертикали в виде строк, то Grid позиционирует элементы сразу в двух направлениях - в виде строк и столбцов, образуя тем самым таблицу.
+                    </p>
+                    <p>Полностью спецификацию модуля Grid Layout можно посмотреть на странице <a href="www.w3.org/TR/css-grid-1">www.w3.org/TR/css-grid-1</a></p>
+                    <h6 class="title-sub">Поддержка браузерами</h6>
+                    <p>При использовании Grid Layout следует учитывать, что только относительно недавно производители браузеров стали внедрять поддержку этого модуля в свои браузеры. Ниже приводится для браузеров список версий, начиная с которых была внедрена полноценная поддержка Grid Layout:</p>
+                    <ul>
+                      <li>Google Chrome - с версии 57</li>
+                      <li>Mozilla Firefox - с версии 52</li>
+                      <li>Opera - с версии 44</li>
+                      <li>Safari - с версии 10.1</li>
+                      <li>iOS Safari - с версии 10.3</li>
+                    </ul>
+                    <p>Как можно заметить, большинство этих версий браузеров вышли в начале 2017 года. То есть на более старые версии этих браузеров рассчитывать не приходится.Кроме того, IE (начиная с версии 10) и Microsoft Edge имеет лишь частичную поддержку модуля. А Android Browser, Opera Mini, UC Browser вовсе ее не имеют.</p>
+                    <h6 class="title-sub">Создание grid-контейнера</h6>
+                    <p>Основой для определения компоновки Grid Layout является grid container, внутри которого размещаются элементы. Для создания grid-контейнера необходимо присвоить его стилевому свойству <b>display</b> одно из двух значений: grid или <b>inline-grid</b>.</p>
+                    <p>Создадим простейшую веб-страницу, которая применяет Grid Layout:</p>
+                    <pre>
+                      <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+        &lt;title&gt;Grid Layout в CSS3&lt;/title&gt;
+        &lt;style&gt;
+            .grid-container {
+                border: solid 2px #000;
+                display: grid;
+            }
+            .grid-item {
+                text-align:center;
+                font-size: 1.1em;
+                padding: 1.5em;
+                color: white;
+            }
+ 
+            .color1 {background-color: #675BA7;}
+            .color2 {background-color: #9BC850;}
+            .color3 {background-color: #A62E5C;}
+            .color4 {background-color: #2A9FBC;}
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;grid-container&quot;&gt;
+            &lt;div class=&quot;grid-item color1&quot;&gt;Grid Item 1&lt;/div&gt;
+            &lt;div class=&quot;grid-item color2&quot;&gt;Grid Item 2&lt;/div&gt;
+            &lt;div class=&quot;grid-item color3&quot;&gt;Grid Item 3&lt;/div&gt;
+            &lt;div class=&quot;grid-item color4&quot;&gt;Grid Item 4&lt;/div&gt;
+            &lt;div class=&quot;grid-item color1&quot;&gt;Grid Item 5&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;                      
+                    </code>
+                  </pre>
+                  <p>Для контейнера <b>grid-container</b> установлено свойство <b>display:grid</b>. В нем располагается пять grid-элементов.</p>
+                    <style> 
+                    .grid-item{
+                      font-size: 16px!important;
+                    }           
+                        .color1 {background-color: #675BA7;}
+                        .color2 {background-color: #9BC850;}
+                        .color3 {background-color: #A62E5C;}
+                        .color4 {background-color: #2A9FBC;}
+                        .color5 {background-color: #4e342e;}
+                    </style>
+                      <div class="grid-container" style="border: solid 2px #000;display: grid;">
+                          <div class="grid-item color1" style="text-align:center;font-size: 1.1em;padding: 1.5em;                           color: white;">Grid Item 1</div>
+                          <div class="grid-item color2" style="text-align:center;font-size: 1.1em;padding: 1.5em;                           color: white;">Grid Item 2</div>
+                          <div class="grid-item color3" style="text-align:center;font-size: 1.1em;padding: 1.5em;                           color: white;">Grid Item 3</div>
+                          <div class="grid-item color4" style="text-align:center;font-size: 1.1em;padding: 1.5em;                           color: white;">Grid Item 4</div>
+                          <div class="grid-item color1" style="text-align:center;font-size: 1.1em;padding: 1.5em;                           color: white;">Grid Item 5</div>
+                      </div>
+                      <br>
+                      <p>Если значение <b>grid</b> определяет контейнер как блочный элемент, то значение <b>inline-grid</b> определяет элемент как строчный <b>(inline)</b>:</p> 
+                      <pre>
+                        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+        &lt;title&gt;Grid Layout в CSS3&lt;/title&gt;
+        &lt;style&gt;
+            .grid-container {
+                border: solid 2px #000;
+                display: inline-grid;;
+            }
+            .grid-item {
+                text-align:center;
+                font-size: 1.1em;
+                padding: 1.5em;
+                color: white;
+            }
+ 
+            .color1 {background-color: #675BA7;}
+            .color2 {background-color: #9BC850;}
+            .color3 {background-color: #A62E5C;}
+            .color4 {background-color: #2A9FBC;}
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;grid-container&quot;&gt;
+            &lt;div class=&quot;grid-item color1&quot;&gt;Grid Item 1&lt;/div&gt;
+            &lt;div class=&quot;grid-item color2&quot;&gt;Grid Item 2&lt;/div&gt;
+            &lt;div class=&quot;grid-item color3&quot;&gt;Grid Item 3&lt;/div&gt;
+            &lt;div class=&quot;grid-item color4&quot;&gt;Grid Item 4&lt;/div&gt;
+            &lt;div class=&quot;grid-item color1&quot;&gt;Grid Item 5&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;                          
+                        </code>
+                      </pre>  
+                      <p>
+                      <p>В этом случае весь грид занимает только то пространство, которое необходимо для размещения его элементов.</p>     
+                      <div class="grid-container1" style="border: solid 2px #000;display: inline-grid;">
+                          <div class="grid-item color1" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 1</div>
+                          <div class="grid-item color2" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 2</div>
+                          <div class="grid-item color3" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 3</div>
+                          <div class="grid-item color4" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 4</div>
+                          <div class="grid-item color1" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 5</div>
+                      </div></p>                 
+                  </div>
+                </div>                  
+                </div>           
+                </section>
+            </div>            
+          </div>
+
+          <div class="tm-section-wrap bg-white">
+            <section id="grid2" class="row tm-section">
+              <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <h2 class="text-center title-sub">Строки и столбцы</h2>
+                  <p>Грид образует сетку из строк и столбцов, на пересечении которых образуются ячейки. И для установки строк и столбцов в Grid Layout использовать следующие свойства CSS3:</p>
+                  <ul>
+                    <li><b>grid-template-columns:</b>  настраивает столбцы</li>
+                    <li><b>grid-template-rows:</b> настраивает строки</li>
+                  </ul>
+                  <h6 class="title-sub">Столбцы</h6>
+                  <p>Для определения столбцов используем у grid-контейнера стилевое свойство <b>grid-template-columns</b>. Например, определим грид с двумя столбцами:</p>
+                  <pre>
+                    <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+        &lt;title&gt;Grid Layout в CSS3&lt;/title&gt;
+        &lt;style&gt;
+            .grid-container {
+                border: solid 2px #000;
+                display: grid;
+                grid-template-columns: 8em 8em;
+            }
+ 
+            .grid-item {
+                box-sizing: border-box;
+                text-align:center;
+                font-size: 1.1em;
+                padding: 1.5em;
+                color: white;
+            }
+ 
+            .color1 {background-color: #675BA7;}
+            .color2 {background-color: #9BC850;}
+            .color3 {background-color: #A62E5C;}
+            .color4 {background-color: #2A9FBC;}
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;grid-container&quot;&gt;
+            &lt;div class=&quot;grid-item color1&quot;&gt;Grid Item 1&lt;/div&gt;
+            &lt;div class=&quot;grid-item color2&quot;&gt;Grid Item 2&lt;/div&gt;
+            &lt;div class=&quot;grid-item color3&quot;&gt;Grid Item 3&lt;/div&gt;
+            &lt;div class=&quot;grid-item color4&quot;&gt;Grid Item 4&lt;/div&gt;
+            &lt;div class=&quot;grid-item color1&quot;&gt;Grid Item 5&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;                      
+                    </code>
+                  </pre>
+                  <p>В качестве значения свойству <b>grid-template-columns</b> передается ширина столбцов. Сколько мы хотим иметь в гриде столбцов, столько и нужно передать значений этому свойству. Так, в случае выше грид содержит два столбца, поэтому свойству передаются два значения, которые указывают ширину столбцов:</p>
+                  <p>                 
+                  <div class="grid-container" style="border: solid 2px #000;display: grid;grid-template-columns: 8em 8em;">
+                      <div class="grid-item color1" style="box-sizing: border-box;text-align:center;font-size: 1.1em;padding: 1.5em;
+                      color: white;">Grid Item 1</div>
+                      <div class="grid-item color2" style="box-sizing: border-box;text-align:center;font-size: 1.1em;padding: 1.5em;
+                      color: white;">Grid Item 2</div>
+                      <div class="grid-item color3" style="box-sizing: border-box;text-align:center;font-size: 1.1em;padding: 1.5em;
+                      color: white;">Grid Item 3</div>
+                      <div class="grid-item color4" style="box-sizing: border-box;text-align:center;font-size: 1.1em;padding: 1.5em;
+                      color: white;">Grid Item 4</div>
+                      <div class="grid-item color1" style="box-sizing: border-box;text-align:center;font-size: 1.1em;padding: 1.5em;
+                      color: white;">Grid Item 5</div>
+                  </div>                    
+                  </p>
+                  <p>Соответственно если мы хотим, чтобы в гриде было три столбца, то нам надо передать три значения, например:</p>
+                  <code><b>grid-template-columns: 8em 7em 8em;</b></code>
+                  <p>Если столбцов больше чем элементов, то по умолчанию для их вмещения создаются новые строки</p>
+                  <h6 class="title-sub">Строки</h6>
+                  <p>Настойка строк во многом аналогичная настройке столбцов. Для этого у грид-контейнера необходимо установить свойство <b>grid-template-rows</b>, которое задает количество и размеры строк:</p>
+                  <pre>
+                    <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+        &lt;title&gt;Grid Layout в CSS3&lt;/title&gt;
+        &lt;style&gt;
+            .grid-container {
+                border: solid 2px #000;
+                display: grid;
+                grid-template-rows: 4em 5em;
+            }
+            .grid-item {
+                text-align:center;
+                font-size: 1.1em;
+                padding: 1.5em;
+                color: white;
+            }
+            .color1 {background-color: #675BA7;}
+            .color2 {background-color: #9BC850;}
+            .color3 {background-color: #A62E5C;}
+            .color4 {background-color: #2A9FBC;}
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;grid-container&quot;&gt;
+            &lt;div class=&quot;grid-item color1&quot;&gt;Grid Item 1&lt;/div&gt;
+            &lt;div class=&quot;grid-item color2&quot;&gt;Grid Item 2&lt;/div&gt;
+            &lt;div class=&quot;grid-item color3&quot;&gt;Grid Item 3&lt;/div&gt;
+            &lt;div class=&quot;grid-item color4&quot;&gt;Grid Item 4&lt;/div&gt;
+            &lt;div class=&quot;grid-item color1&quot;&gt;Grid Item 5&lt;/div&gt;
+            &lt;div class=&quot;grid-item color4&quot;&gt;Grid Item 6&lt;/div&gt;
+            &lt;div class=&quot;grid-item color3&quot;&gt;Grid Item 7&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;                      
+                    </code>
+                  </pre>
+                  <p>Свойству <b>grid-template-rows</b> передается высота каждой из строк. Так, в данном случае высота первой строки составляет <b>4em</b>, а второй - <b>5em</b>.</p>
+                  <p>
+                    <div class="grid-container" style="border: solid 2px #000;display: grid;grid-template-rows: 4em 5em; grid-template-columns: 8em 7em 8em;">
+                        <div class="grid-item color1" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 1</div>
+                        <div class="grid-item color2" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 2</div>
+                        <div class="grid-item color3" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 3</div>
+                        <div class="grid-item color4" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 4</div>
+                        <div class="grid-item color1" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 5</div>
+                        <div class="grid-item color4" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 6</div>
+                        <div class="grid-item color3" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 7</div>
+                    </div>
+                  </p>
+                  <p>В то же время, если элементов больше, чем ячеек грида, то образуются дополнительные строки (как в случае со столбцами). Поэтому, несмотря на то, что выше были определены настройки только для двух строк, в реальности строк в гриде будет три строки, причем, как видно на скриншоте, высота третьей строки необязательно будет 5em, как у других строк, она будет вычисляться автоматически. Изменим стили <b>grid-контейнера</b>, добавив еще две строки:</p>
+                  <pre>
+                    <code>
+.grid-container {
+    border: solid 2px #000;
+    display: grid;
+    grid-template-columns: 8em 8em 8em;
+    grid-template-rows: 5em 5em 5em 5em;
+}                      
+                    </code>
+                    <p>Здесь определено три столбца и четыре строки:</p>                    
+                        <div class="grid-container" style="border: solid 2px #000;display: grid;grid-template-columns: 9em 9em 9em;   grid-template-rows: 5em 5em 5em 5em;">
+                        <div class="grid-item color1" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 1</div>
+                        <div class="grid-item color2" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 2</div>
+                        <div class="grid-item color3" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 3</div>
+                        <div class="grid-item color4" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 4</div>
+                        <div class="grid-item color1" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 5</div>
+                        <div class="grid-item color4" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 6</div>
+                        <div class="grid-item color3" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 7</div>
+                    </div>
+                  </pre>
+                  <p>И поскольку ячеек грида больше, чем элементов, то последняя строка оказывается пустой.</p>
+                </div>
+              </div>                
+              </div>
+            </section>
+          </div>
+            
+          <div class="tm-section-wrap bg-white">
+            <section id="grid3" class="row tm-section">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h2 class="title-sub text-center">Функция repeat и свойство grid</h2>
+                    <p><b class="title-sub">Повторение строк и столбцов</b></p>
+                    <p>Если у нас столбцов и(или) строк много и они имеют одинаковые размеры, то есть смыл использовать специальную функцию <b>repeat()</b>, которая позволит настроить строки и столбцы. Так, в примере выше повторяется определение одинаковых строк и столбцов в <b>grid</b>-контейнере:</p>
+                    <code>grid-template-columns: 8em 8em 8em;</code>
+                    <pre></pre>
+                    <code>grid-template-rows: 5em 5em 5em 5em;</code>
+                    <p>Здесь мы видим, что происходит повторение одних и тех же размеров - 8em и 5em для установки ширины столбцов и высоты строк. Поэтому перепишем стили, применив функцию <b>repeat</b>:</p>
+                    <code><pre>
+.grid-container {
+    border: solid 2px #000;
+    display: grid;
+    grid-template-columns: repeat(3, 8em);
+    grid-template-rows: repeat(4, 5em);
+}
+                    </pre></code>
+                    <p>Первый параметр функции repeat представляет число повторений, а второй - определение строк или столбцов. Например, свойство <b>grid-template-columns: repeat(3, 8em)</b>; говорит, что необходимо определить <b>3</b> столбца шириной в <b>8em</b>.</p>
+                    <p>Соответственно выражение <b>grid-template-rows: repeat(4, 5em)</b> определяет <b>4</b> строки высотой по <b>5em</b>.</p>
+                    <p>Можно задавать повторение нескольких столбцов и строк:</p>
+                    <pre>
+                      <code>
+.grid-container {
+    border: solid 2px #000;
+    display: grid;
+    grid-template-columns: repeat(2, 7em 8em);
+    grid-template-rows: 6em repeat(3, 5em);
+}
+                      </code>
+                    </pre>
+                    <p>В данном случае будет создано <b>4</b> столбца: два раза будут повторяться два столбца с шириной <b>7em и 8em</b>.
+                      <br>
+                    В случае со строками будет создано <b>4</b> строки. Причем первая будет иметь высоту в 6em, а остальные три - <b>5em</b>.</p>
+                    <h6 class="title-sub">Свойство grid</h6>
+                    <p>Свойство <b>grid</b> объединяет свойства <b>grid-template-rows и grid-template-columns</b> и разом позволяет задать настройки для строк и столбцов в следующем формате:</p>
+                    <code>grid: grid-template-rows / grid-template-columns;</code>
+                    <p>К примеру, у нас есть следующее определение класса <b>grid</b>-контейнера:</p>
+                    <pre>
+                      <code>
+.grid-container {
+    border: solid 2px #000;
+    display: grid;
+    grid-template-columns: 8em 8em 8em;
+    grid-template-rows: 5em 5em 5em 5em;
+}                        
+                      </code>
+                    </pre>
+                    <p>Мы можем сократить этот класс следующим образом:</p>
+                    <pre>
+                      <code>
+.grid-container {
+    border: solid 2px #000;
+    display: grid;
+    grid: 5em 5em 5em 5em / 8em 8em 8em;
+}                        
+                      </code>
+                    </pre>
+                    <p>Либо опять же используя функцию repeat(), можно еще больше сократить определение грида:</p>
+                    <pre>
+                      <code>
+.grid-container {
+    border: solid 2px #000;
+    display: grid;
+    grid: repeat(4, 5em) / repeat(3, 8em);
+}                        
+                      </code>
+                    </pre>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+            
+          <div class="tm-section-wrap bg-white">
+            <section id="grid4" class="row tm-section">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <h2 class="title-sub text-center">Размеры строк и столбцов</h2>
+                  <p class="title-sub">Фиксированные размеры</p>
+                  <p>В примерах, которые были рассмотрены в предыдущих статьях, ширина столбцов и длина строк устанавливались на основании фиксированных значений, которые передаются свойствам <b>grid-template-columns</b> и <b>grid-template-rows</b>. Для определения размеров мы можем использовать самые различные единицы измерения, которые нам доступны в CSS <b>(px, em, rem, pt, %)</b>, например:</p>
+                  <pre>
+                    <code>
+.grid-container {
+    border: solid 2px #000;
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 4.5em);
+}                      
+                    </code>
+                  </pre>
+                  <p class="title-sub">Автоматические размеры</p>
+                  <p>Кроме точных размеров можно задавать автоматические размеры с помощью слова <b>auto</b>. В этом случае ширина столбцов и высота строк вычисляются исходя из размеров содержимого:</p>
+                  <pre>
+                    <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+        &lt;title&gt;Grid Layout в CSS3&lt;/title&gt;
+        &lt;style&gt;
+            .grid-container {
+                border: solid 2px #000;
+                display: grid;
+                grid-template-columns: 8em auto auto;
+                grid-template-rows: auto 4.5em auto;
+            }
+            .grid-item {
+                text-align:center;
+                font-size: 1.1em;
+                padding: 1.5em;
+                color: white;
+            }
+            .color1 {background-color: #675BA7;}
+            .color2 {background-color: #9BC850;}
+            .color3 {background-color: #A62E5C;}
+            .color4 {background-color: #2A9FBC;}
+            .color5 {background-color: #4e342e;}
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;grid-container&quot;&gt;
+            &lt;div class=&quot;grid-item color1&quot;&gt;Grid Item 1&lt;/div&gt;
+            &lt;div class=&quot;grid-item color2&quot;&gt;Grid Item 2&lt;/div&gt;
+            &lt;div class=&quot;grid-item color3&quot;&gt;Grid Item 3&lt;/div&gt;
+            &lt;div class=&quot;grid-item color4&quot;&gt;Grid Item 4&lt;/div&gt;
+            &lt;div class=&quot;grid-item color5&quot;&gt;Grid Item 5&lt;/div&gt;
+            &lt;div class=&quot;grid-item color1&quot;&gt;Grid Item 6&lt;/div&gt;
+            &lt;div class=&quot;grid-item color2&quot;&gt;Grid Item 7&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;                      
+                    </code>
+                  </pre>
+                  <p>Здесь задано три строки и ти столбца. Первый столбец имеет фиксированную ширину в 8em, а второй и третий столбцы - автоматическую ширину. И также первая и третья строки имеют автоматическую высоту, а вторая строка - фиксированную.</p>
+                    <div class="grid-container" style=" border: solid 2px #000;display: grid; grid-template-columns: 8em auto auto;           grid-template-rows: auto 4.5em auto;">
+                        <div class="grid-item color1" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 1</div>
+                        <div class="grid-item color2" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 2</div>
+                        <div class="grid-item color3" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 3</div>
+                        <div class="grid-item color4" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 4</div>
+                        <div class="grid-item color5" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 5</div>
+                        <div class="grid-item color1" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 6</div>
+                        <div class="grid-item color2" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 7</div>
+                    </div> 
+                    <p class="title-sub">Пропорциональные размеры</p> 
+                    <p>Для установки пропорциональных размеров применяется специальная единица измерения <b>fr</b>. Она представляет собой часть пространства <b>(fraction)</b>, которое отводится для данного столбца или строки. Значение fr еще называют <b>flex-фактором (flex factor)</b>. 
+                    <br> 
+                    Вычисление пропорциональных размеров производится по формуле:</p>      
+                    <code>flex-фактор * доступное_пространство  / сумма всех flex-факторов</code>   
+                    <p>При этом под доступным пространством понимается все пространство <b>grid-контейнера</b> за исключением фиксированных значений строк и столбцов.</p> 
+                    <pre>
+                      <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+        &lt;title&gt;Grid Layout в CSS3&lt;/title&gt;
+        &lt;style&gt;
+            *{
+                box-sizing: border-box;
+            }
+            html, body{
+                margin:0;
+                padding:0;
+            }
+            .grid-container {
+                height: 100vh;
+                border: solid 2px #000;
+                display: grid;
+                grid-template-columns: 8em 2fr 1fr;
+                grid-template-rows: 1fr 4.5em 1fr;
+            }
+            .grid-item {
+                text-align:center;
+                font-size: 1.1em;
+                padding: 1.5em;
+                color: white;
+            }
+            .color1 {background-color: #675BA7;}
+            .color2 {background-color: #9BC850;}
+            .color3 {background-color: #A62E5C;}
+            .color4 {background-color: #2A9FBC;}
+            .color5 {background-color: #4e342e;}
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;grid-container&quot;&gt;
+            &lt;div class=&quot;grid-item color1&quot;&gt;Grid Item 1&lt;/div&gt;
+            &lt;div class=&quot;grid-item color2&quot;&gt;Grid Item 2&lt;/div&gt;
+            &lt;div class=&quot;grid-item color3&quot;&gt;Grid Item 3&lt;/div&gt;
+            &lt;div class=&quot;grid-item color4&quot;&gt;Grid Item 4&lt;/div&gt;
+            &lt;div class=&quot;grid-item color5&quot;&gt;Grid Item 5&lt;/div&gt;
+            &lt;div class=&quot;grid-item color1&quot;&gt;Grid Item 6&lt;/div&gt;
+            &lt;div class=&quot;grid-item color2&quot;&gt;Grid Item 7&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;                        
+                      </code>
+                    </pre>   
+                  <div class="grid-container" style="width: 80%; height: 40vh;border: solid 2px #000;display: grid;grid-template-columns: 8em 2fr 1fr;    grid-template-rows: 1fr 4.5em 1fr;">
+                      <div class="grid-item color1" style="box-sizing: border-box; text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 1</div>
+                      <div class="grid-item color2" style="box-sizing: border-box; text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 2</div>
+                      <div class="grid-item color3" style="box-sizing: border-box; text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 3</div>
+                      <div class="grid-item color4" style="box-sizing: border-box; text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 4</div>
+                      <div class="grid-item color5" style="box-sizing: border-box; text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 5</div>
+                      <div class="grid-item color1" style="box-sizing: border-box; text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 6</div>
+                      <div class="grid-item color2" style="box-sizing: border-box; text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 7</div>
+                  </div> 
+                  <p>В данном случае имеются три столбца с шириной <b>2fr, 8em, 1fr.</b> Поэтому ширина второго столбца будет вычисляться по формуле:</p>  
+                  <code>2 * (ширина_грида - 8em) / (2 + 1)</code>  
+                  <p>Ширина третьего столбца будет вычисляться по формуле:</p>
+                  <code>1 * (ширина_грида - 8em) / (2 + 1)</code>      
+                  <p>И если первый столбец фиксированный с шириной 8em, то ширина второго и третьего столбца будут зависеть от ширины контейнера и будут автоматически масштабироваться при ее изменении. <br>
+                  В отношении строк все аналогично.</p>            
+                </div>
+              </div>
+            </div>                             
+            </section>
+          </div>
+            
+          <div class="tm-section-wrap bg-white">
+            <section id="grid5" class="row tm-section">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h2 class="title-sub text-center">Отступы между столбцами и строками</h2>
+                    <p>Для создания отступов между столбцами и строками применяются свойства <b>grid-column-gap и grid-row-gap</b> соответственно.</p>
+                    <pre>
+                      <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+        &lt;title&gt;Grid Layout в CSS3&lt;/title&gt;
+        &lt;style&gt;
+            *{
+                box-sizing: border-box;
+            }
+            html, body{
+                margin:0;
+                padding:0;
+            }
+            .grid-container {
+                height: 100vh;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                grid-column-gap: 10px;
+                grid-row-gap: 10px;
+            }
+            .grid-item {
+                text-align:center;
+                font-size: 1.1em;
+                padding: 1.5em;
+                color: white;
+            }
+            .color1 {background-color: #675BA7;}
+            .color2 {background-color: #9BC850;}
+            .color3 {background-color: #A62E5C;}
+            .color4 {background-color: #2A9FBC;}
+            .color5 {background-color: #4e342e;}
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;grid-container&quot;&gt;
+            &lt;div class=&quot;grid-item color1&quot;&gt;Grid Item 1&lt;/div&gt;
+            &lt;div class=&quot;grid-item color2&quot;&gt;Grid Item 2&lt;/div&gt;
+            &lt;div class=&quot;grid-item color3&quot;&gt;Grid Item 3&lt;/div&gt;
+            &lt;div class=&quot;grid-item color4&quot;&gt;Grid Item 4&lt;/div&gt;
+            &lt;div class=&quot;grid-item color1&quot;&gt;Grid Item 5&lt;/div&gt;
+            &lt;div class=&quot;grid-item color4&quot;&gt;Grid Item 6&lt;/div&gt;
+            &lt;div class=&quot;grid-item color5&quot;&gt;Grid Item 7&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;                        
+                      </code>
+                    </pre>
+                      <div class="grid-container" style="height: 100vh;display: grid;grid-template-columns: repeat(3, 1fr);grid-template-rows: repeat(3, 1fr);grid-column-gap: 10px;grid-row-gap: 10px;">
+                          <div class="grid-item color1" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 1</div>
+                          <div class="grid-item color2" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 2</div>
+                          <div class="grid-item color3" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 3</div>
+                          <div class="grid-item color4" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 4</div>
+                          <div class="grid-item color1" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 5</div>
+                          <div class="grid-item color4" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 6</div>
+                          <div class="grid-item color5" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 7</div>
+                      </div>
+                      <p>Если значения свойств <b>grid-column-gap и grid-row-gap</b> совпадают, то вместо них можно определить одно свойство gap (ранее назвалось <b>grid-gap</b>), которое установит оба отступа:</p> 
+                      <pre>
+                        <code>
+.grid-container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+}                          
+                        </code>
+                      </pre>                  
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="tm-section-wrap bg-white">
+            <section id="grid6" class="row tm-section">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h2 class="title-sub text-center">Позиционирование элементов</h2>
+                    <p>Грид представляет собой набор ячеек, которые образуются на пересечении столбцов и строк. Но сами строки и столбцы образуются с помощью <b>grid-линий</b>, которые рассекают грид по вертикали и горизонтали:</p>
+                    <p><img src="img/grid20.png" alt=""></p>
+                    <p>И по умолчанию каждый элемент в гриде позиционируется в одну ячейку по порядку. Но мы можем более точно настроить расположение элемента в гриде с помощью ряда свойств</p>
+                    <ul>
+                      <li><b>grid-row-start:</b> задает начальную горизонтальную grid-линию, с которой начинается элемент</li>
+                      <li><b>grid-row-end:</b> указывает, до какой горизонтальной grid-линии надо растягивать элемент</li>
+                      <li><b>grid-column-start:</b> задает начальную вертикальную grid-линию, от которой начинается элемент</li>
+                      <li><b>grid-column-end:</b> указывает, до какой вертикальной grid-линии нужно растягивать элемен</li>
+                    </ul>
+                    <p>Например, растянем элемент на несколько столбцов:</p>
+                    <pre>
+                      <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+        &lt;title&gt;Grid Layout в CSS3&lt;/title&gt;
+        &lt;style&gt;
+            .grid-container {
+                border: solid 2px #000;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(3, 5em);
+            }
+            .special-item{
+                grid-column-start:2;
+                grid-column-end: 5;
+            }
+            .grid-item {
+                text-align:center;
+                font-size: 1.1em;
+                padding: 1.5em;
+                color: white;
+            }
+            .color1 {background-color: #675BA7;}
+            .color2 {background-color: #9BC850;}
+            .color3 {background-color: #A62E5C;}
+            .color4 {background-color: #2A9FBC;}
+            .color5 {background-color: #4e342e;}
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;grid-container&quot;&gt;
+            &lt;div class=&quot;grid-item color1&quot;&gt;Grid Item 1&lt;/div&gt;
+            &lt;div class=&quot;grid-item color2 special-item&quot;&gt;Grid Item 2&lt;/div&gt;
+            &lt;div class=&quot;grid-item color3&quot;&gt;Grid Item 3&lt;/div&gt;
+            &lt;div class=&quot;grid-item color4&quot;&gt;Grid Item 4&lt;/div&gt;
+            &lt;div class=&quot;grid-item color5&quot;&gt;Grid Item 5&lt;/div&gt;
+            &lt;div class=&quot;grid-item color1&quot;&gt;Grid Item 6&lt;/div&gt;
+            &lt;div class=&quot;grid-item color4&quot;&gt;Grid Item 7&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;                        
+                      </code>
+                    </pre>
+                    <div class="grid-container" style="border: solid 2px #000;display: grid; grid-template-columns: repeat(4, 1fr);            grid-template-rows: repeat(3, 5em);">
+                        <div class="grid-item color1" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 1</div>
+                        <div class="grid-item color2 special-item" style=" grid-column-start:2;grid-column-end: 5;text-align:center;font-size: 1.1em;      padding: 1.5em;color: white;">Grid Item 2</div>
+                        <div class="grid-item color3" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 3</div>
+                        <div class="grid-item color4" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 4</div>
+                        <div class="grid-item color5" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 5</div>
+                        <div class="grid-item color1" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 6</div>
+                        <div class="grid-item color4" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 7</div>
+                    </div> 
+                    <p>Здесь определено четыре столбца, причем второму элементу присвоен особый класс <b>special-item</b>, который располагается, начиная со <b>2</b> <b>grid-линии</b> или <b>2-го</b> столбца <b>(grid-column-start: 2)</b> до <b>5-й</b>rid-линии (grid-column-end: 5). вертикальной gb
+                      <br>
+                    Второй элемент необязательно должен начинаться со второго столбца, это может быть любой другой: и <b>1-й, и 3-й и т.д.</b> Например, если мы поместим второй элемент, начиная с <b>3-го столбца</b>, то на месте второго столбца образуется пустота:</p>
+                    <pre>
+                      <code>
+.special-item{
+    grid-column-start: 3;
+    grid-column-end: 5;
+}                        
+                      </code>
+                    </pre> 
+                    <div class="grid-container" style="border: solid 2px #000;display: grid; grid-template-columns: repeat(4, 1fr);            grid-template-rows: repeat(3, 5em);">
+                        <div class="grid-item color1" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 1</div>
+                        <div class="grid-item color2 special-item" style=" grid-column-start:3;grid-column-end: 5;text-align:center;font-size: 1.1em;      padding: 1.5em;color: white;">Grid Item 2</div>
+                        <div class="grid-item color3" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 3</div>
+                        <div class="grid-item color4" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 4</div>
+                        <div class="grid-item color5" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 5</div>
+                        <div class="grid-item color1" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 6</div>
+                        <div class="grid-item color4" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 7</div>
+                    </div>       
+                    <p>Если для второго элемента установить начало с первого столбца, то второй элемент будет перенесен на следующую строку, и таким образом, он будет начинаться с первого столбца.
+                      <br>
+                    Вместо использования двух выше рассмотренных свойств мы можем использовать одно свойство - <b>grid-column</b>, которое принимает значения <b>grid-column-start</b> и <b>grid-column-end</b> через слеш:</p>  
+                    <code>grid-column: grid-column-start / grid-column-end;</code>
+                    <p>Например, мы можем сократить стиль класса <b>special-item</b> следующим образом:</p> 
+                    <pre>
+                      <code>
+.special-item{
+    grid-column: 3 / 5;
+}                        
+                      </code>
+                    </pre>  
+                    <p>Аналогично с помощью свойств <b>grid-row-start</b> и <b>grid-row-end</b> можно задать позиционирование элемента на несколько строк. Так, изменим класс <b>special-item</b> следующим образом:</p>   
+                    <pre>
+                      <code>
+.special-item{
+    grid-column-start:2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}                        
+                      </code>
+                    </pre>
+                    <p>В данном случае второй элемент позиционируется во втором столбце первой строки и растягивается до 3-й строки.</p>
+                        <div class="grid-container" style="border: solid 2px #000;display: grid; grid-template-columns: repeat(4, 1fr);            grid-template-rows: repeat(3, 5em);">
+                        <div class="grid-item color1" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 1</div>
+                        <div class="grid-item color2 special-item" style=" grid-column-start:2;grid-row-start: 1;grid-row-end: 3;text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 2</div>
+                        <div class="grid-item color3" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 3</div>
+                        <div class="grid-item color4" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 4</div>
+                        <div class="grid-item color5" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 5</div>
+                        <div class="grid-item color1" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 6</div>
+                        <div class="grid-item color4" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 7</div>
+                    </div>    
+                    <p>Вместо использования пары свойств <b>grid-row-start и grid-row-end</b> можно использовать одно общее свойство <b>grid-row:</b></p>
+                      <code>grid-row: grid-row-start / grid-row-end;</code> 
+                      <p>Так, мы могли бы изменить стиль <b>special-item</b> следующим образом:</p>
+                      <pre>
+                        <code>
+.special-item{
+    grid-column-start:2;
+    grid-row: 1 / 3;
+}                          
+                        </code>
+                      </pre>
+                      <h6 class="title-sub">span</h6>
+                      <p>С помощью специального слова span можно задать растяжение элемента на несколько ячеек. После слова <b>span</b> указывается, на какое количество ячеек надо растянуть элемент:</p>
+                      <pre>
+                        <code>
+.special-item{
+    grid-row: 1 / span 2;
+    grid-column: 2 / span 2;
+}                          
+                        </code>
+                      </pre>
+                      <p>Элемент помещается в ячейку, которая находится на пересечении первой строки и второго столбца, и растягивается на две строки вниз и на два столбца вправо.</p>
+                      <h6 class="title-sub">grid-area</h6>
+                      <p>Свойство <b>grid-area</b> объединяет свойства <b>grid-column и grid-row</b>, позволяя сократить их запись:</p>
+                      <code>grid-area: row-start / column-start / row-end / column-end</code>
+                      <p>Например, изменим стили класса <b>special-item:</b></p>
+                      <pre>
+                        <code>
+.special-item{
+    grid-area: 1 / 2 / 3 / 4;
+}                          
+                        </code>
+                      </pre>
+                        <div class="grid-container" style="border: solid 2px #000;display: grid; grid-template-columns: repeat(4, 1fr);            grid-template-rows: repeat(3, 5em);">
+                        <div class="grid-item color1" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 1</div>
+                        <div class="grid-item color2 special-item" style="grid-area: 1 / 2 / 3 / 4; grid-column-start:2;grid-row-start: 1;grid-row-end: 3;text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 2</div>
+                        <div class="grid-item color3" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 3</div>
+                        <div class="grid-item color4" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 4</div>
+                        <div class="grid-item color5" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 5</div>
+                        <div class="grid-item color1" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 6</div>
+                        <div class="grid-item color4" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 7</div>
+                    </div>                       
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <div class="tm-section-wrap bg-white">
+            <section id="grid7" class="row tm-section">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h2 class="title-sub text-center">Наложение элементов</h2>
+                    <p>Манипулируя положением элементов мы легко можем осуществить их наложение, создать своего рода слои из элементов. Например, определим следующий грид:</p>
+                    <pre>
+                      <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+        &lt;title&gt;Grid Layout в CSS3&lt;/title&gt;
+        &lt;style&gt;
+            *{
+                box-sizing: border-box;
+            }
+            html, body{
+                margin:0;
+                padding:0;
+            }
+            .grid-container {
+                height: 100vh;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                grid-gap: 10px;
+            }
+            .grid-item {
+                text-align:center;
+                font-size: 1.1em;
+                padding: 1.5em;
+                color: white;
+                z-index: 1;
+            }
+            .item1{
+                grid-area: 1 / 1 / 3 / 4;
+                opacity: 0.8;
+            }
+            .item2{
+                grid-area: 1 / 1 / 2 / 2;
+            }
+            .item3{
+                grid-area: 1 / 3 / 2 / 4;
+            }
+            .item4{
+                grid-area: 2 / 1 / 3 / 2;
+            }
+            .item5{
+                grid-area: 2 / 2 / 3 / 3;
+            }
+            .item6{
+                grid-area: 2 / 3 / 3 / 4;
+            }
+            .item7{
+                grid-area: 3 / 1 / 4 / 2;
+            }
+            .color1 {background-color: #675BA7;}
+            .color2 {background-color: #9BC850;}
+            .color3 {background-color: #A62E5C;}
+            .color4 {background-color: #2A9FBC;}
+            .color5 {background-color: #4e342e;}
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;grid-container&quot;&gt;
+            &lt;div class=&quot;grid-item item1 color2&quot;&gt;Grid Item 2&lt;/div&gt;
+            &lt;div class=&quot;grid-item item2 color1&quot;&gt;Grid Item 1&lt;/div&gt;
+            &lt;div class=&quot;grid-item item3 color3&quot;&gt;Grid Item 3&lt;/div&gt;
+            &lt;div class=&quot;grid-item item4 color4&quot;&gt;Grid Item 4&lt;/div&gt;
+            &lt;div class=&quot;grid-item item5 color1&quot;&gt;Grid Item 5&lt;/div&gt;
+            &lt;div class=&quot;grid-item item6 color4&quot;&gt;Grid Item 6&lt;/div&gt;
+            &lt;div class=&quot;grid-item item7 color5&quot;&gt;Grid Item 7&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;                        
+                      </code>
+                    </pre>
+                    <p>Здесь первый элемент занимает то же пространство, что и пять следующих элементов. Благодаря установке свойства <b></b> у всех элементов получается, что как первый элемент как-будто лежит фоном под другими пятью элементами.</p>
+                    <div class="grid-container" style="height: 40vh;display:grid;grid-template-columns:repeat(3, 1fr);grid-template-rows:repeat(3, 1fr);grid-gap: 10px;">
+                        <div class="grid-item item1 color2" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;z-index: 1;           grid-area: 1 / 1 / 3 / 4;opacity: 0.8;" >Grid Item 2</div>
+                        <div class="grid-item item2 color1" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;z-index: 1;           grid-area: 1 / 1 / 2 / 2;">Grid Item 1</div>
+                        <div class="grid-item item3 color3" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;z-index: 1;grid-area: 1 / 3 / 2 / 4;">Grid Item 3</div>
+                        <div class="grid-item item4 color4" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;z-index: 1;           grid-area: 2 / 1 / 3 / 2;">Grid Item 4</div>
+                        <div class="grid-item item5 color1" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;z-index: 1;           grid-area: 2 / 2 / 3 / 3;">Grid Item 5</div>
+                        <div class="grid-item item6 color4" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;z-index: 1;           grid-area: 2 / 3 / 3 / 4;">Grid Item 6</div>
+                        <div class="grid-item item7 color5" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;z-index: 1;           grid-area: 3 / 1 / 4 / 2;">Grid Item 7</div>
+                    </div>
+                        <p>При необходимости слой из первого элемента можно наоборот перенести ближе к пользователю, накрыв остальные элементы. Для этого надо увеличить у него значение <b>z-index:</b></p>
+                        <pre>
+                  <code>
+.item1{
+    grid-area: 1 / 1 / 3 / 4;
+    opacity: 0.8;
+    z-index: 10;
+}                    
+                  </code>
+                </pre>  
+                    <div class="grid-container" style="height: 40vh;display:grid;grid-template-columns:repeat(3, 1fr);grid-template-rows:repeat(3, 1fr);grid-gap: 10px;">
+                        <div class="grid-item item1 color2" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;grid-area: 1 / 1 / 3 / 4;opacity: 0.8;z-index: 10;" >Grid Item 2</div>
+                        <div class="grid-item item2 color1" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;z-index: 1;           grid-area: 1 / 1 / 2 / 2;">Grid Item 1</div>
+                        <div class="grid-item item3 color3" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;z-index: 1;grid-area: 1 / 3 / 2 / 4;">Grid Item 3</div>
+                        <div class="grid-item item4 color4" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;z-index: 1;           grid-area: 2 / 1 / 3 / 2;">Grid Item 4</div>
+                        <div class="grid-item item5 color1" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;z-index: 1;           grid-area: 2 / 2 / 3 / 3;">Grid Item 5</div>
+                        <div class="grid-item item6 color4" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;z-index: 1;           grid-area: 2 / 3 / 3 / 4;">Grid Item 6</div>
+                        <div class="grid-item item7 color5" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;z-index: 1;           grid-area: 3 / 1 / 4 / 2;">Grid Item 7</div>                
+                    </div>                                  
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <div class="tm-section-wrap bg-white">
+            <section id="grid8" class="row tm-section">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h2 class="title-sub text-center">Направление и порядок элементов</h2>
+                    <h6 class="title-sub">Свойство grid-auto-flow</h6>
+                    <p>По умолчанию все элементы располагаются по порядку горизонтально, если места в строке больше нет, то элементы переносятся на следующую строку. Но с помощью свойства <b></b> можно изменить направление элементов. Это свойство принимает два значения:</p>
+                    <ul>
+                      <li><b>row:</b> значение по умолчанию, элементы располагаются в строку друг за другом, если места в строке не хватает, элементы переносятся на следующую строку</li>
+                      <li><b>column:</b> элементы располагаются в столбик, если места в столбце не хватает, то элементы переходят в следующий столбец</li>
+                    </ul>
+                    <p>Применим данное свойство:</p>
+                    <pre>
+                      <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+        &lt;title&gt;Grid Layout в CSS3&lt;/title&gt;
+        &lt;style&gt;
+            *{
+                box-sizing: border-box;
+            }
+            html, body{
+                margin:0;
+                padding:0;
+            }
+            .grid-container {
+                height: 100vh;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                grid-auto-flow: row;
+            }
+            .grid-item {
+                text-align:center;
+                font-size: 1.1em;
+                padding: 1.5em;
+                color: white;
+            }
+            .color1 {background-color: #675BA7;}
+            .color2 {background-color: #9BC850;}
+            .color3 {background-color: #A62E5C;}
+            .color4 {background-color: #2A9FBC;}
+            .color5 {background-color: #4e342e;}
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;grid-container&quot;&gt;
+            &lt;div class=&quot;grid-item color1&quot;&gt;Grid Item 1&lt;/div&gt;
+            &lt;div class=&quot;grid-item color2&quot;&gt;Grid Item 2&lt;/div&gt;
+            &lt;div class=&quot;grid-item color3&quot;&gt;Grid Item 3&lt;/div&gt;
+            &lt;div class=&quot;grid-item color4&quot;&gt;Grid Item 4&lt;/div&gt;
+            &lt;div class=&quot;grid-item color1&quot;&gt;Grid Item 5&lt;/div&gt;
+            &lt;div class=&quot;grid-item color4&quot;&gt;Grid Item 6&lt;/div&gt;
+            &lt;div class=&quot;grid-item color5&quot;&gt;Grid Item 7&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;                        
+                      </code>
+                    </pre>
+                    <p>Свойство <b>grid-auto-flow</b> имеет значение row, поэтому элементы будут располагаться в строку.</p>
+                    <div class="grid-container" style="height: 40vh;display: grid;grid-template-columns: repeat(3, 1fr);grid-template-rows: repeat(3, 1fr);grid-auto-flow: row;">
+                        <div class="grid-item color1" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 1</div>
+                        <div class="grid-item color2" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 2</div>
+                        <div class="grid-item color3" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 3</div>
+                        <div class="grid-item color4" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 4</div>
+                        <div class="grid-item color1" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 5</div>
+                        <div class="grid-item color4" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 6</div>
+                        <div class="grid-item color5" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 7</div>
+                    </div> 
+                    <p>Теперь изменим стиль <b>grid-контейнера:</b></p>   
+                    <pre>
+                      <code>
+.grid-container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-auto-flow: column;
+}                        
+                      </code>
+                    </pre>
+                    <p>После этого элементы будут располагаться в столбец</p>
+                    <div class="grid-container" style="height: 40vh;display: grid;grid-template-columns: repeat(3, 1fr);grid-template-rows: repeat(3, 1fr);grid-auto-flow: column;">
+                        <div class="grid-item color1" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 1</div>
+                        <div class="grid-item color2" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 2</div>
+                        <div class="grid-item color3" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 3</div>
+                        <div class="grid-item color4" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 4</div>
+                        <div class="grid-item color1" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 5</div>
+                        <div class="grid-item color4" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 6</div>
+                        <div class="grid-item color5" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 7</div>
+                    </div>  
+                    <br>
+                    <h6 class="title-sub">Свойство order</h6>    
+                    <p>Свойство <b>order</b> позволяет задать порядок элементов. По умолчанию для каждого элемента в гриде это свойство имеет значение 0. Поэтому элементы располагаются друг за другом как они определены в разметке html. Но мы можем переопределить этот порядок:</p>
+                    <pre>
+                      <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+        &lt;title&gt;Grid Layout в CSS3&lt;/title&gt;
+        &lt;style&gt;
+            *{
+                box-sizing: border-box;
+            }
+            html, body{
+                margin:0;
+                padding:0;
+            }
+            .grid-container {
+                height: 100vh;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+            }
+            .grid-item {
+                text-align:center;
+                font-size: 1.1em;
+                padding: 1.5em;
+                color: white;
+            }
+            .last-item{
+                order: 1;
+            }
+            .first-item{
+                order: -1;
+            }
+            .color1 {background-color: #675BA7;}
+            .color2 {background-color: #9BC850;}
+            .color3 {background-color: #A62E5C;}
+            .color4 {background-color: #2A9FBC;}
+            .color5 {background-color: #4e342e;}
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;grid-container&quot;&gt;
+            &lt;div class=&quot;grid-item color1&quot;&gt;Grid Item 1&lt;/div&gt;
+            &lt;div class=&quot;grid-item color2 last-item&quot;&gt;Grid Item 2&lt;/div&gt;
+            &lt;div class=&quot;grid-item color3 last-item&quot;&gt;Grid Item 3&lt;/div&gt;
+            &lt;div class=&quot;grid-item color4&quot;&gt;Grid Item 4&lt;/div&gt;
+            &lt;div class=&quot;grid-item color1&quot;&gt;Grid Item 5&lt;/div&gt;
+            &lt;div class=&quot;grid-item color4&quot;&gt;Grid Item 6&lt;/div&gt;
+            &lt;div class=&quot;grid-item color5 first-item&quot;&gt;Grid Item 7&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;                        
+                      </code>
+                    </pre>  
+                    <div class="grid-container" style="height: 40vh;display: grid;grid-template-columns: repeat(3, 1fr);grid-template-rows: repeat(3, 1fr);">
+                        <div class="grid-item color1" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 1</div>
+                        <div class="grid-item color2 last-item" style="order: 1; text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 2</div>
+                        <div class="grid-item color3 last-item" style="order: 1; text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 3</div>
+                        <div class="grid-item color4" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 4</div>
+                        <div class="grid-item color1" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 5</div>
+                        <div class="grid-item color4" style="text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 6</div>
+                        <div class="grid-item color5 first-item" style="order: -1; text-align:center;font-size: 1.1em;padding: 1.5em;color: white;">Grid Item 7</div>
+                    </div>
+                    <p>Элементы с классом <b>last-item</b> имеет порядок <b>1</b>, поэтому они будут располагаться после других элементов, у которых порядок равен <b>0</b> или меньше.</p>  
+                    <p>Если же необходимо поставить одни элементы перед другими, то можно использовать отрицательное значение для свойства <b>order</b>. Так, у седьмого элемента порядок равен <b>-1</b>, что меньше, чем у других элементов. Поэтому последний в разметке элемент по факту будет располагаться перед всеми элементами.</p>                       
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <div class="tm-section-wrap bg-white">
+            <section id="grid9" class="row tm-section">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h2 class="title-sub text-center">Именованные grid-линии</h2>
+                    <p>В <b>Grid Layout</b> мы можем дать наименование каждой линии грида, присвоив ей какое-либо имя в квадратных скобках и затем, используя это имя, позиционировать элементы. Например, определим следующую веб-страницу:</p>
+                    <pre>
+                      <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+        &lt;title&gt;Grid Layout в CSS3&lt;/title&gt;
+        &lt;style&gt;
+            *{
+                box-sizing: border-box;
+            }
+            html, body{
+                margin:0;
+                padding:0;
+            }
+            .grid-container {
+                height:100vh;
+                display: grid;
+                grid-template-columns: [col1start] 1fr [col1end] 10px 
+                                        [col2start] 1fr [col2end] 10px
+                                        [col3start] 1fr [col3end];
+                grid-template-rows: [row1start] 1fr [row1end] 10px [row2start] 1fr [row2end];
+            }
+             
+            .grid-item {
+                background-color: #ddd;
+            }
+             
+            .special-item{
+                grid-column: col1start / col2end;
+                grid-row: row1start;
+                background-color: #bbb;
+            }
+            .item1{
+                grid-column: col3start / col3end;
+                grid-row: row1start;
+            }
+            .item2{
+                grid-column: col1start / col1end;
+                grid-row: row2start;
+            }
+            .item3{
+                grid-column: col2start / col2end;
+                grid-row: row2start;
+            }
+            .item4{
+                grid-column: col3start / col3end;
+                grid-row: row2start;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;grid-container&quot;&gt;
+            &lt;div class=&quot;grid-item special-item&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;grid-item item1&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;grid-item item2&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;grid-item item3&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;grid-item item4&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;                        
+                      </code>
+                    </pre>
+                    <p>При именовании линий их имена заключаются в квадратные скобки, а между для именами указывается ширина столбца или высота строки, которые находятся между этими линиями:</p>
+                    <pre>
+                      <code>
+grid-template-columns: [col1start] 1fr [col1end] 10px
+                        [col2start] 1fr [col2end] 10px
+                        [col3start] 1fr [col3end];
+grid-template-rows: [row1start] 1fr [row1end] 10px [row2start] 1fr [row2end];                        
+                      </code>
+                    </pre>
+                    <p>Затем, используя эти названия, мы можем позиционировать элементы между определенными линиями:</p>
+                    <pre>
+                      <code>
+.special-item{
+    grid-column: col1start / col2end;
+    grid-row: row1start;
+    background-color: #bbb;
+}                        
+                      </code>
+                    </pre>
+                    <p>Так, в данном случае элемент с классом <b>special-item</b> начинает от вертикальной линии <b>col1start</b> и растягивается до вертикальной линии <b>col2end</b>. И также он начинается от горизонтальной линии row1start, и так как конечная горизонтальная линия не указана, то элемент занимает только одну строку.</p>
+                      <div class="grid-container" style="height:40vh;display: grid;grid-template-columns: [col1start] 1fr [col1end] 10px 
+                                        [col2start] 1fr [col2end] 10px
+                                        [col3start] 1fr [col3end];grid-template-rows: [row1start] 1fr [row1end] 10px [row2start] 1fr [row2end];">
+                          <div class="grid-item special-item" style="background-color: #ddd;grid-column: col1start / col2end;grid-row: row1start;background-color: #bbb;"></div>
+                          <div class="grid-item item1" style="background-color: #ddd;grid-column: col3start / col3end;grid-row: row1start;"></div>
+                          <div class="grid-item item2" style="background-color: #ddd; grid-column: col1start / col1end;grid-row: row2start;"></div>
+                          <div class="grid-item item3" style="background-color: #ddd;grid-column: col2start / col2end; grid-row: row2start;"></div>
+                          <div class="grid-item item4" style="background-color: #ddd;grid-column: col3start / col3end; grid-row: row2start;"></div>
+                      </div> 
+                      <br>
+                      <p>Или другой пример, связанный с созданием макета страницы:</p>
+                      <pre>
+                        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+        &lt;title&gt;Grid Layout в CSS3&lt;/title&gt;
+        &lt;style&gt;
+            *{
+                box-sizing: border-box;
+            }
+            html, body {
+                padding: 0;
+                margin: 0;
+            }
+ 
+            .grid-container {
+                display: grid;
+                height: 100vh;
+                grid-template-rows: 6em 10px 1fr;
+                grid-template-columns: [mainstart] 1fr [mainend] 10px [sidebarestart] 25% [sidebarend];
+            }
+ 
+            .grid-item-content {
+                background-color: #455a64;
+                grid-row: 3 / 4;
+                grid-column: mainstart / mainend;
+            }
+ 
+            .grid-item-sidebar {
+                background-color: #37474f;
+                grid-row: 3 / 4;
+                grid-column: sidebarestart / sidebarend;
+            }
+ 
+            .grid-item-header{
+                background-color: #263238;
+                grid-row: 1 / 2;
+                grid-column: mainstart / sidebarend;
+            }
+ 
+            .grid-item {
+                color: #fff;
+                text-align: center;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;main class=&quot;grid-container&quot;&gt;
+            &lt;header class=&quot;grid-item grid-item-header&quot;&gt;
+                &lt;h1&gt;Header&lt;/h1&gt;
+            &lt;/header&gt;
+                 
+            &lt;article class=&quot;grid-item grid-item-content&quot;&gt;
+                &lt;h1&gt;Main Content&lt;/h1&gt;
+            &lt;/article&gt;
+             
+            &lt;aside class=&quot;grid-item grid-item-sidebar&quot;&gt;
+                &lt;h1&gt;Sidebar&lt;/h1&gt;
+            &lt;/aside&gt;
+        &lt;/main&gt;
+    &lt;/body&gt;
+&lt;/html&gt;                          
+                        </code>
+                      </pre>
+                      <main class="grid-container" style=" display: grid;height: 40vh;grid-template-rows: 6em 10px 1fr;grid-template-columns: [mainstart] 1fr [mainend] 10px [sidebarestart] 25% [sidebarend]">
+                          <header class="grid-item grid-item-header" style="color: #fff;
+                text-align: center; background-color: #263238;grid-row: 1 / 2;grid-column: mainstart / sidebarend;">
+                              <h1>Header</h1>
+                          </header>
+                               
+                          <article class="grid-item grid-item-content" style="color: #fff;
+                text-align: center; background-color: #455a64;grid-row: 3 / 4;grid-column: mainstart / mainend;">
+                              <h1>Main Content</h1>
+                          </article>
+                           
+                          <aside class="grid-item grid-item-sidebar" style="color: #fff;
+                text-align: center; background-color: #37474f;grid-row: 3 / 4;grid-column: sidebarestart / sidebarend;">
+                              <h1>Sidebar</h1>
+                          </aside>
+                      </main>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div> 
+
+          <div class="tm-section-wrap bg-white">
+            <section id="grid10" class="row tm-section">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h2 class="title-sub text-center">Именованные grid-линии и функция repeat</h2>
+                    <p>С помощью ранее рассмотренной функции repeat мы можем растиражировать столбцы и строки, которые создаются между именованными <b>grid-линиями:</b></p>
+                    <pre>
+                      <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+        &lt;title&gt;Grid Layout в CSS3&lt;/title&gt;
+        &lt;style&gt;
+            *{
+                box-sizing: border-box;
+            }
+            html, body{
+                margin:0;
+                padding:0;
+            }
+            .grid-container {
+                height:100vh;
+                display: grid;
+                grid-template-columns: 10px repeat(3, [column] 1fr [colgutter] 10px);
+                grid-template-rows: 10px repeat(2, [row] 1fr [rowgutter] 10px);
+            }
+             
+            .grid-item {
+                background-color: #ddd;
+            }
+             
+            .special-item{
+                grid-column: column 2;
+                grid-row: row 1;
+                background-color: #bbb;
+            }
+            .item1{
+                grid-column: column 1;
+                grid-row: row 1;
+            }
+            .item2{
+                grid-column: column 3;
+                grid-row: row 1;
+            }
+            .item3{
+                grid-column: column 1;
+                grid-row: row 2;
+            }
+            .item4{
+                grid-column: column 2;
+                grid-row: row 2;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;grid-container&quot;&gt;
+            &lt;div class=&quot;grid-item special-item&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;grid-item item1&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;grid-item item2&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;grid-item item3&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;grid-item item4&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;                        
+                      </code>
+                    </pre>
+                    <p>Возьмем из данного примера определение столбцов:</p>
+                    <code>grid-template-columns: 10px repeat(3, [column] 1fr [colgutter] 10px);</code>
+                    <p>Первый столбец будет иметь ширину в <b>10</b> пикселей. Затем происходит тиражирование столбцов с помощью функции repeat. Она создает подряд три копии двух столбцов. Первый столбец имеет ширину <b>1fr</b>, то есть имеет пропорциональные размеры, и располагается между <b>grid-линиями "column" и "colgutter". После grid-линии "colgutter"</b> идет еще один столбец шириной в 10 пикселей. И эти два столбца будут повторяться три раза. То есть всего в гриде будет <b>7</b> столбцов.
+                      <br>
+                    Со строками будет во многом аналогично, только там создается <b>5 строк с помощью grid-линий "row" и "rowgutter".</b>
+                    <br>
+                    При определении стиля элементов, используя имя <b>grid-линий</b> и их порядковый номер, мы можем явным образом указать с помощью свойств <b>grid-column и grid-row</b>, где именно должен располагаться элемент:</p>
+                    <pre>
+                      <code>
+ .special-item{
+    grid-column: column 2;  /* второй столбец с именем column */
+    grid-row: row 1;        /* первая строка с именем row */
+    background-color: #bbb;
+}                       
+                      </code>
+                    </pre>
+                    <p>Причем свойство <b>grid-column</b>: <b>column 2</b> указывает на столбец в гриде, который начинается со второй <b>grid-линии "column"</b>. В итоге мы получим следующий грид:</p>
+                     <div class="grid-container" style="height:40vh;display: grid;grid-template-columns: 10px repeat(3, [column] 1fr [colgutter] 10px);
+                grid-template-rows: 10px repeat(2, [row] 1fr [rowgutter] 10px);">
+                        <div class="grid-item special-item" style="background-color: #bbb; grid-column: column 2;
+                grid-row: row 1;"></div>
+                        <div class="grid-item item1" style="background-color: #ddd;grid-column: column 1;
+                grid-row: row 1;"></div>
+                        <div class="grid-item item2" style="background-color: #ddd;grid-column: column 3;
+                grid-row: row 1;"></div>
+                        <div class="grid-item item3" style="background-color: #ddd;grid-column: column 1;
+                grid-row: row 2;"></div>
+                        <div class="grid-item item4" style="background-color: #ddd;grid-column: column 2;
+                grid-row: row 2;"></div>
+                    </div> 
+                    <p>Возможно, многие найдут такой подход более интуитивно понятным для определения позиции элемента.
+                      <br>
+                    И более того мы можем дополнительно добавлять новые именованные грид-линии вне функции <b> repeat:</b></p>
+                    <pre>
+                      <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+        &lt;title&gt;Grid Layout в CSS3&lt;/title&gt;
+        &lt;style&gt;
+            *{
+                box-sizing: border-box;
+            }
+            html, body{
+                margin:0;
+                padding:0;
+            }
+            .grid-container {
+                height:100vh;
+                display: grid;
+                grid-template-columns: 10px repeat(3, [column] 1fr [colgutter] 10px) 
+                                       [sidebarstart] 150px [sidebarend] 10px;
+                grid-template-rows: 10px repeat(2, [row] 1fr [rowgutter] 10px);
+            }
+             
+            .grid-item {
+                background-color: #ddd;
+            }
+             
+            .special-item{
+                grid-column: column 2;
+                grid-row: row 1;
+                background-color: #bbb;
+            }
+            .item1{
+                grid-column: column 1;
+                grid-row: row 1;
+            }
+            .item2{
+                grid-column: column 3;
+                grid-row: row 1;
+            }
+            .item3{
+                grid-column: column 1;
+                grid-row: row 2;
+            }
+            .item4{
+                grid-column: column 2;
+                grid-row: row 2;
+            }
+            .sidebar{
+                grid-column: sidebarstart / sidebarend;
+                grid-row: 2 / 5;
+                background-color: #ccc;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;grid-container&quot;&gt;
+            &lt;div class=&quot;grid-item special-item&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;grid-item item1&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;grid-item item2&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;grid-item item3&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;grid-item item4&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;grid-item sidebar&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;                        
+                      </code>
+                    </pre>
+                    <p>И также стоит отметить, что вне зависимости от того, именованные строки,столбцы и grid-линии или неименованные, мы по прежнему можем позиционировать элементы, используя номера grid-линий, как в данном случае происходит в отношении сайдбара:</p>
+                    <pre>
+                      <code>
+.sidebar{
+    grid-column: sidebarstart / sidebarend;
+    grid-row: 2 / 5;
+    background-color: #ccc;
+}                        
+                      </code>
+                    </pre>
+                    <div class="grid-container" style="height:40vh; display: grid;
+                grid-template-columns: 10px repeat(3, [column] 1fr [colgutter] 10px)[sidebarstart] 150px [sidebarend] 10px;
+                grid-template-rows: 10px repeat(2, [row] 1fr [rowgutter] 10px);"> 
+                        <div class="grid-item special-item" style="grid-column: column 2;
+                grid-row: row 1;background-color: #bbb;" ></div>
+                        <div class="grid-item item1" style="background-color: #ddd; grid-column: column 1;
+                grid-row: row 1;" ></div>
+                        <div class="grid-item item2" style="background-color: #ddd;  grid-column: column 3;
+                grid-row: row 1;" ></div>
+                        <div class="grid-item item3" style="background-color: #ddd;grid-column: column 1;
+                grid-row: row 2;" ></div>
+                        <div class="grid-item item4" style="background-color: #ddd;grid-column: column 2;
+                grid-row: row 2;" ></div>
+                        <div class="grid-item sidebar" style="background-color: #ddd;  grid-column: sidebarstart / sidebarend;
+                grid-row: 2 / 5;
+                background-color: #ccc;" ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>  
+
+          <div class="tm-section-wrap bg-white">
+            <section id="grid11" class="row tm-section">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h2 class="title-sub text-center">Области грида</h2>
+                    <p>В рамках грида мы можем определять области <b>(grid area).</b> Области определятся с помощью двух вертикальных и двух горизонтальных <b>grid-линий</b>, которые собственно и задают занимаемое областью пространство. В этом плане область не эквивалентна одной ячейке грида и может включать несколько ячеек. Области особенно полезны для определения семантических отношений между различными частями макета сраницы. <br>
+                      Для определения областей у grid-контейнера применяется свойство <b>grid-template-areas</b>. Например, определим три области:</p>
+                      <pre>
+                        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+        &lt;title&gt;Grid Layout в CSS3&lt;/title&gt;
+        &lt;style&gt;
+            *{
+                box-sizing: border-box;
+            }
+            html, body{
+                margin:0;
+                padding:0;
+            }
+            .grid-container {
+                height:100vh;
+                display: grid;
+                grid-template-areas: &quot;header header&quot;
+                                     &quot;sidebar content&quot;
+                                     &quot;sidebar content&quot;;
+                grid-template-columns: 150px 1fr;
+                grid-template-rows: 100px 1fr 100px;
+            }
+            .header { grid-area: header; background-color: #bbb; }
+            .sidebar { grid-area: sidebar; background-color: #ccc; }
+            .content { grid-area: content; background-color: #eee; }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;grid-container&quot;&gt;
+            &lt;div class=&quot;header&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;sidebar&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;content&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;                          
+                        </code>
+                      </pre>
+                      <p>Здесь у <b>grid-контейнера</b> определяется два столбца и три строки:</p>
+                      <code>grid-template-columns: 150px 1fr;</code>
+                      <br>
+                      <code>grid-template-rows: 100px 1fr 100px;</code>
+                      <p>То есть в итоге у нас будет в гриде 3 х 2 = 6 ячеек. Но в разметке страницы определено три элемента с одноименными областями: header, <b>sidebar</b>, <b>content</b>. И свойство <b>grid-template-areas</b> как раз устанавливает, как эти области будут располагаться в ячейках грида:</p>
+                      <code>grid-template-areas:    "header header"
+                        "sidebar content"
+                        "sidebar content";
+                      </code>
+                      <p>Выражение <b>"header header"</b> представляет первую строку и указывает, что область header занимает две ячейки подряд подряд.
+                        <br>
+                      Следующее выражение <b>"sidebar content"</b> указывает на вторую строку, где область <b>sidebar</b> занимает первую ячейку, а content - вторую ячейку. Третья строка повторяет вторую. То есть в итоге, если смотреть по ячейкам, то получится следующим образом:</p>  
+                      <p>Для установки области у элементов задается свойство <b>grid-area</b>:</p>  
+                      <pre>
+                        <code>
+.header { 
+    grid-area: header;  /* элемент с классом header помещается в область header*/
+    background-color: #bbb; 
+}                          
+                        </code>
+                      </pre> 
+                      <p>В итоге мы получим следующую страницу:</p>
+                      <div class="grid-container" style="height:40vh;
+                      display: grid;
+                      grid-template-areas: 'header header'
+                                     'sidebar content'
+                                     'sidebar content';
+                                     grid-template-columns: 150px 1fr;grid-template-rows: 100px 1fr 100px;">
+                          <div class="header" style="grid-area: header; background-color: #bbb;"></div>
+                          <div class="sidebar" style="grid-area: sidebar; background-color: #ccc;"></div>
+                          <div class="content" style="grid-area: content; background-color: #eee;"></div>
+                      </div>
+                      <br>
+                      <p>Теперь рассмотрим другой более сложный пример. Пусть код веб-страницы выглядит следующим образом:</p>
+                      <pre>
+                        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+        &lt;title&gt;Grid Layout в CSS3&lt;/title&gt;
+        &lt;style&gt;
+            *{
+                box-sizing: border-box;
+            }
+            html, body{
+                margin:0;
+                padding:0;
+            }
+            .grid-container {
+                height:100vh;
+                display: grid;
+                grid-template-areas: &quot;header header header header header&quot;
+                                     &quot;. . . . .&quot;
+                                     &quot;menu . content . sidebar&quot;
+                                     &quot;. . . . .&quot;
+                                     &quot;footer footer footer footer footer&quot;;
+                grid-template-columns: 130px 5px 1fr 5px 130px;
+                grid-template-rows: 90px 5px 1fr 5px 90px;
+            }
+            .header { grid-area: header; background-color: #bbb; }
+            .menu { grid-area: menu; background-color: #ccc; }
+            .sidebar { grid-area: sidebar; background-color: #ccc; }
+            .content { grid-area: content; background-color: #eee; }
+            .footer { grid-area: footer; background-color: #bbb; }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;grid-container&quot;&gt;
+            &lt;div class=&quot;header&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;content&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;menu&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;sidebar&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;footer&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;                          
+                        </code>
+                      </pre> 
+                      <p>Теперь грид содержит 5 строк и 5 столбцов, то есть в совокупности 25 ячеек, которые размещают 5 областей: <b>header, menu, sidebar, content и footer.</b>
+                        <br>
+                      Свойство <b>grid-template-areas</b> в стилях <b>grid-контейнера</b> опять же содержит определение того, как все эти области сопоставляются с ячейками. Например, элемент header должен занимать все пять ячеек первой строки: <b>"header header header header header".</b> Но определение второй строки, высота которой 5px, выглядит уже необычно: ". . . . .". Точка означает, что данная ячейка не будет принадлежать ни одной области и останется незаполненной. Если надо оставить 5 незаполненных ячеек, то указывается пять точек, между которыми ставятся пробелы. В итоге мы получим пять областей, между которыми будут располагаться незаполненные пространства:</p> 
+                    <div class="grid-container" style="height:100vh;display: grid;
+                grid-template-areas: 'header header header header header'
+                                     '. . . . .'
+                                     'menu . content . sidebar'
+                                     '. . . . .'
+                                     'footer footer footer footer footer';
+                grid-template-columns: 130px 5px 1fr 5px 130px;
+                grid-template-rows: 90px 5px 1fr 5px 90px;">
+                        <div class="header" style="grid-area: header; background-color: #bbb;"></div>
+                        <div class="content" style="grid-area: content; background-color: #ccc;"></div>
+                        <div class="menu" style="grid-area: menu; background-color: #ccc;"></div>
+                        <div class="sidebar" style="grid-area: sidebar; background-color: #eee;"></div>
+                        <div class="footer" style="grid-area: footer; background-color: #bbb;"></div>
+                    </div>                                                                               
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div> 
+
+          <div class="tm-section-wrap bg-white">
+            <section id="grid12" class="row tm-section">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h2 class="title-sub text-center">Макет страницы в Grid Layout</h2>
+                    <p>Рассмотрим создание простейшего адаптивного стандартного макета веб-страницы, который состоит из шапки, подвала, основного содержимого, блока навигации и сайдбара. Для этого определим следующую веб-станицу</p>
+                    <pre>
+                      <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+        &lt;title&gt;Grid Layout в CSS3&lt;/title&gt;
+        &lt;style&gt;
+            *{
+                box-sizing: border-box;
+            }
+            html, body{
+                margin:0;
+                padding:0;
+            }
+            .grid-container {
+                height:100vh;
+                display: grid;
+                grid-template-areas: &quot;header&quot;
+                                     &quot;.&quot;
+                                     &quot;menu&quot;
+                                     &quot;.&quot;
+                                     &quot;content&quot;
+                                     &quot;.&quot;
+                                     &quot;sidebar&quot;
+                                     &quot;.&quot;
+                                     &quot;footer&quot;;
+                grid-template-columns: 1fr;
+                grid-template-rows: 80px 5px 80px 5px 1fr 5px 80px 5px 80px;
+            }
+            .header { grid-area: header; background-color: #bbb; }
+            .menu { grid-area: menu; background-color: #ccc; }
+            .sidebar { grid-area: sidebar; background-color: #ccc; }
+            .content { grid-area: content; background-color: #eee; }
+            .footer { grid-area: footer; background-color: #bbb; }
+            h3{ 
+                text-align:center;
+            }
+            @media screen and (min-width: 468px) {
+                 
+                .grid-container {
+                    height:100vh;
+                    display: grid;
+                    grid-template-areas: &quot;header header header header header&quot;
+                                         &quot;. . . . .&quot;
+                                         &quot;menu . content . sidebar&quot;
+                                         &quot;. . . . .&quot;
+                                         &quot;footer footer footer footer footer&quot;;
+                    grid-template-columns: 130px 5px 1fr 5px 130px;
+                    grid-template-rows: 90px 5px 1fr 5px 90px;
+                }
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;grid-container&quot;&gt;
+            &lt;div class=&quot;header&quot;&gt;&lt;h3&gt;Header&lt;/h3&gt;&lt;/div&gt;
+            &lt;div class=&quot;content&quot;&gt;&lt;h3&gt;Content&lt;/h3&gt;&lt;/div&gt;
+            &lt;div class=&quot;menu&quot;&gt;&lt;h3&gt;Menu&lt;/h3&gt;&lt;/div&gt;
+            &lt;div class=&quot;sidebar&quot;&gt;&lt;h3&gt;Sidebar&lt;/h3&gt;&lt;/div&gt;
+            &lt;div class=&quot;footer&quot;&gt;&lt;h3&gt;Footer&lt;/h3&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;                        
+                      </code>
+                    </pre>
+                    <p>В прошлой теме уже рассматривалось применение именованных областей. И здесь они также используются, так как очень удобно связывать стили с семантикой станицы через области.
+                      <br>
+                    Однако, так как предполагается, что веб-станицу могут просматривать на мобильных устройствах, где ширина экрана ограничена, то хотелось бы иметь адаптивный макет. Поэтому в стиля имеются два разных определения грида. Одно определение грида для мобильных устройств (условно в качестве ширины устройств выбрано значение в 468px):</p>
+                    <pre>
+                      <code>
+.grid-container {
+    height:100vh;
+    display: grid;
+    grid-template-areas: &quot;header&quot;
+                         &quot;.&quot;
+                         &quot;menu&quot;
+                         &quot;.&quot;
+                         &quot;content&quot;
+                         &quot;.&quot;
+                         &quot;sidebar&quot;
+                         &quot;.&quot;
+                         &quot;footer&quot;;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 5px 80px 5px 1fr 5px 80px 5px 80px;
+}                        
+                      </code>
+                    </pre>
+                    <p>В таком состоянии грид имеет только один столбец и 5 строк для каждой области плюс 4 строки-разделители.</p>
+                    <p><img src="img/grid28.png" alt=""></p>
+                    <p>При увеличении ширины экрана в действие вступает другое определение грида:</p>
+                    <pre>
+                      <code>
+.grid-container {
+    height:100vh;
+    display: grid;
+    grid-template-areas: &quot;header header header header header&quot;
+                         &quot;. . . . .&quot;
+                         &quot;menu . content . sidebar&quot;
+                         &quot;. . . . .&quot;
+                         &quot;footer footer footer footer footer&quot;;
+    grid-template-columns: 130px 5px 1fr 5px 130px;
+    grid-template-rows: 90px 5px 1fr 5px 90px;
+}                        
+                      </code>
+                    </pre>
+                    <p>В этом случае столбцов и строк будет по пять:</p>
+                    <p><img src="img/grid27.png" alt=""></p>                   
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>           
+
+        </main>        
+      </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.singlePageNav.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/scroll.js"></script>
+  </body>
+</html>
